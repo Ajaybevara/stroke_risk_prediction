@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Recommendations - Stroke Risk Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/theme-toggle.css">
+    <style>
+        :root {
+            --primary: #0EA5E9;
+            --primary-dark: #0369A1;
+            --primary-glow: rgba(14, 165, 233, 0.25);
+            --accent: #06D6A0;
+            --accent-alt: #8B5CF6;
+            --success: #10B981;
+            --danger: #F43F5E;
+            --warning: #F59E0B;
+            --bg-dark: #0B1120;
+            --bg-surface: rgba(15, 23, 42, 0.7);
+            --bg-card: rgba(15, 23, 42, 0.85);
+            --bg-elevated: rgba(30, 41, 59, 0.6);
+            --bg-input: rgba(30, 41, 59, 0.8);
+            --border: rgba(56, 189, 248, 0.12);
+            --border-subtle: rgba(56, 189, 248, 0.06);
+            --border-focus: rgba(14, 165, 233, 0.5);
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            min-height: 100vh;
+            color: var(--text-primary);
+        }
+
+        .bg-effects {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(14, 165, 233, 0.12), transparent),
+                radial-gradient(ellipse 60% 40% at 90% 100%, rgba(6, 214, 160, 0.08), transparent),
+                radial-gradient(ellipse 40% 50% at 5% 50%, rgba(139, 92, 246, 0.06), transparent);
+        }
+
+        .grid-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(14, 165, 233, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(14, 165, 233, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .nav-brand-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .nav-link {
+            padding: 8px 16px;
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+            border-color: var(--border);
+        }
+
+        .nav-link.active {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(6, 214, 160, 0.08));
+            color: var(--primary);
+            border-color: rgba(14, 165, 233, 0.25);
+        }
+
+        .nav-link.logout {
+            color: var(--danger);
+        }
+
+        .nav-link.logout:hover {
+            background: rgba(244, 63, 94, 0.1);
+            border-color: rgba(244, 63, 94, 0.2);
+        }
+
+        .nav-link.admin-link {
+            color: var(--accent-alt);
+        }
+
+        .nav-link.admin-link:hover {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: rgba(139, 92, 246, 0.2);
+        }
+
+        .nav-link.delete-account {
+            color: #EF4444;
+            border-color: rgba(239, 68, 68, 0.2);
+        }
+
+        .nav-link.delete-account:hover {
+            background: rgba(239, 68, 68, 0.15);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .user-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: rgba(14, 165, 233, 0.08);
+            border: 1px solid rgba(14, 165, 233, 0.15);
+            border-radius: 10px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 900px) {
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+                padding: 14px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        .card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            margin-bottom: 24px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon-box {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(6, 214, 160, 0.08));
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--border-focus);
+            background: var(--bg-elevated);
+        }
+
+        .form-section {
+            margin-bottom: 28px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .sec-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(6, 214, 160, 0.05));
+            border: 1px solid rgba(14, 165, 233, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .section-header h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .range-value {
+            float: right;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(6, 214, 160, 0.08));
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.85rem;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+        }
+
+        .results-section {
+            display: none;
+            margin-top: 24px;
+        }
+
+        .results-section.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .risk-badge {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .risk-badge.low {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1));
+            color: #059669;
+            border: 2px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .risk-badge.medium {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1));
+            color: #B45309;
+            border: 2px solid rgba(245, 158, 11, 0.4);
+        }
+
+        .risk-badge.high {
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.2), rgba(244, 63, 94, 0.1));
+            color: #BE123C;
+            border: 2px solid rgba(244, 63, 94, 0.4);
+            animation: pulseRisk 2s infinite;
+        }
+
+        body[data-theme="dark"] .risk-badge.low  { color: #34D399; }
+        body[data-theme="dark"] .risk-badge.medium { color: #FCD34D; }
+        body[data-theme="dark"] .risk-badge.high { color: #FB7185; }
+
+        @keyframes pulseRisk {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 30px 10px rgba(244, 63, 94, 0.1);
+            }
+        }
+
+        .recommendation-section {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .recommendation-section h3 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .recommendation-section h3 i {
+            color: var(--primary);
+        }
+
+        .recommendation-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .recommendation-list li {
+            padding: 10px 14px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            font-size: 0.88rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.6;
+        }
+
+        .recommendation-list li:before {
+            content: '\f0a4';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary);
+            font-size: 0.75rem;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .recommendation-list.indian-foods li {
+            background: rgba(6, 214, 160, 0.07);
+            border-color: rgba(6, 214, 160, 0.2);
+            color: var(--text-primary);
+        }
+
+        .recommendation-list.avoid-foods li {
+            background: rgba(244, 63, 94, 0.07);
+            border-color: rgba(244, 63, 94, 0.2);
+            color: var(--text-primary);
+        }
+
+        .recommendation-list.avoid-foods li:before {
+            content: '\f00d';
+            color: var(--danger);
+        }
+
+        .recommendation-list.critical li:before {
+            color: var(--danger);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-effects"></div>
+    <div class="grid-overlay"></div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="nav-brand-icon"><i class="fas fa-heartbeat"></i></div>
+                <span>StrokeGuard AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="/dashboard" class="nav-link"><i class="fas fa-chart-line"></i> Dashboard</a>
+                <a href="/history" class="nav-link"><i class="fas fa-clock-rotate-left"></i> History</a>
+                <a href="/medications" class="nav-link"><i class="fas fa-capsules"></i> Medications</a>
+                <a href="/doctor-recommendations" class="nav-link active"><i class="fas fa-user-doctor"></i> Doctor Recommendations</a>
+                {% if role == 'admin' %}
+                <a href="/admin" class="nav-link admin-link"><i class="fas fa-shield-halved"></i> Admin</a>
+                {% endif %}
+                <div class="user-badge"><i class="fas fa-user-circle"></i> {{ user }}</div>
+                <a href="/logout" class="nav-link logout"><i class="fas fa-right-from-bracket"></i> Logout</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="card">
+            <h2 class="card-title">
+                <div class="icon-box"><i class="fas fa-user-doctor"></i></div>
+                Doctor Recommendations
+            </h2>
+
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">
+                Enter your complete health information below to receive personalized stroke risk assessment, doctor recommendations, and Indian food suggestions.
+            </p>
+
+            <form id="doctorForm">
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="sec-icon"><i class="fas fa-user"></i></div>
+                        <h3>Personal Details</h3>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Age <span class="range-value" id="ageValue">50</span></label>
+                            <input type="range" id="age" name="age" min="0" max="100" value="50" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Ever Married</label>
+                            <select id="ever_married" name="ever_married" required>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Residence Type</label>
+                            <select id="residence_type" name="residence_type" required>
+                                <option value="Urban">Urban</option>
+                                <option value="Rural">Rural</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Information -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="sec-icon"><i class="fas fa-heart-pulse"></i></div>
+                        <h3>Health Metrics</h3>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Hypertension (Blood Pressure) <span class="range-value" id="bpValue">120</span> mmHg</label>
+                            <input type="range" id="blood_pressure" name="blood_pressure" min="60" max="220" value="120">
+                        </div>
+                        <div class="form-group">
+                            <label>Heart Disease</label>
+                            <select id="heart_disease" name="heart_disease" required>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Avg Glucose <span class="range-value" id="glucoseValue">100</span> mg/dL</label>
+                            <input type="range" id="avg_glucose_level" name="avg_glucose_level" min="50" max="350" value="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label>BMI <span class="range-value" id="bmiValue">25.0</span></label>
+                            <input type="range" id="bmi" name="bmi" min="10" max="60" value="25" step="0.1" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lifestyle Information -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="sec-icon"><i class="fas fa-briefcase"></i></div>
+                        <h3>Lifestyle</h3>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Work Type</label>
+                            <select id="work_type" name="work_type" required>
+                                <option value="Private">Private</option>
+                                <option value="Self-employed">Self-employed</option>
+                                <option value="Govt_job">Government Job</option>
+                                <option value="children">Children</option>
+                                <option value="Never_worked">Never Worked</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Smoking Status</label>
+                            <select id="smoking_status" name="smoking_status" required>
+                                <option value="never smoked">Never Smoked</option>
+                                <option value="formerly smoked">Formerly Smoked</option>
+                                <option value="smokes">Currently Smokes</option>
+                                <option value="Unknown">Unknown</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-wand-magic-sparkles"></i> Predict Risk
+                </button>
+            </form>
+
+            <!-- Results -->
+            <div class="results-section" id="resultsSection">
+                <div class="risk-badge low" id="riskBadge">Low Risk</div>
+
+                <div class="recommendation-section">
+                    <h3><i class="fas fa-stethoscope"></i> Medical Advice</h3>
+                    <ul class="recommendation-list" id="medicalAdvice"></ul>
+                </div>
+
+                <div class="recommendation-section">
+                    <h3><i class="fas fa-bowl-rice"></i> Indian Foods to Include</h3>
+                    <ul class="recommendation-list indian-foods" id="indianFoodsToEat"></ul>
+                </div>
+
+                <div class="recommendation-section">
+                    <h3><i class="fas fa-ban"></i> Indian Foods to Avoid</h3>
+                    <ul class="recommendation-list avoid-foods" id="indianFoodsToAvoid"></ul>
+                </div>
+
+                <div class="recommendation-section">
+                    <h3><i class="fas fa-heartbeat"></i> Lifestyle Changes</h3>
+                    <ul class="recommendation-list" id="lifestyleChanges"></ul>
+                </div>
+
+                <div class="recommendation-section">
+                    <h3><i class="fas fa-leaf"></i> Indian Food Suggestions</h3>
+                    <ul class="recommendation-list indian-foods" id="indianFoodSuggestions"></ul>
+                </div>
+
+                <!-- PDF Download -->
+                <div style="text-align:center; margin-top:28px;">
+                    <button type="button" class="btn-primary" id="downloadDoctorPdfBtn" onclick="downloadDoctorPDF()">
+                        <i class="fas fa-file-pdf"></i> Download PDF Report
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global state for PDF download
+        let currentFormData = null;
+        let currentRecommendations = null;
+
+        // Update range value displays
+        document.getElementById('age').addEventListener('input', (e) => {
+            document.getElementById('ageValue').textContent = e.target.value;
+        });
+        document.getElementById('blood_pressure').addEventListener('input', (e) => {
+            document.getElementById('bpValue').textContent = e.target.value;
+        });
+        document.getElementById('avg_glucose_level').addEventListener('input', (e) => {
+            document.getElementById('glucoseValue').textContent = e.target.value;
+        });
+        document.getElementById('bmi').addEventListener('input', (e) => {
+            document.getElementById('bmiValue').textContent = parseFloat(e.target.value).toFixed(1);
+        });
+
+        document.getElementById('doctorForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Collect all form data
+            const formData = {
+                age: parseInt(document.getElementById('age').value),
+                gender: document.getElementById('gender').value,
+                blood_pressure: parseFloat(document.getElementById('blood_pressure').value),
+                hypertension: parseFloat(document.getElementById('blood_pressure').value) >= 140 ? 1 : 0,
+                heart_disease: parseInt(document.getElementById('heart_disease').value),
+                ever_married: document.getElementById('ever_married').value,
+                work_type: document.getElementById('work_type').value,
+                residence_type: document.getElementById('residence_type').value,
+                avg_glucose_level: parseFloat(document.getElementById('avg_glucose_level').value),
+                bmi: parseFloat(document.getElementById('bmi').value),
+                smoking_status: document.getElementById('smoking_status').value
+            };
+            currentFormData = formData;  // save for PDF download
+
+            // Risk logic matching backend clinical thresholds
+            // BP:      <100=low, 100-179=medium, >=180=high
+            // Glucose: <100=low, 100-139=medium, >=140=high (diabetic range)
+            // Smoking: 'smokes' upgrades risk by one level
+            const bp = formData.blood_pressure;
+            const glucose = formData.avg_glucose_level;
+            const smoking = formData.smoking_status;
+
+            let bpRisk = 'low';
+            if (bp < 100) bpRisk = 'low';
+            else if (bp >= 180) bpRisk = 'high';
+            else if (bp >= 100) bpRisk = 'medium';
+
+            let glucoseRisk = 'low';
+            if (glucose < 100) glucoseRisk = 'low';
+            else if (glucose >= 140) glucoseRisk = 'high';
+            else if (glucose >= 100) glucoseRisk = 'medium';
+
+            const riskOrder = { low: 0, medium: 1, high: 2 };
+            const riskKeys = ['low', 'medium', 'high'];
+            let riskLevel = riskOrder[bpRisk] >= riskOrder[glucoseRisk] ? bpRisk : glucoseRisk;
+
+            // Smoking factor — active smoker upgrades risk by one level
+            if (smoking === 'smokes') {
+                riskLevel = riskKeys[Math.min(riskOrder[riskLevel] + 1, 2)];
+            } else if (smoking === 'formerly smoked' && riskLevel === 'low') {
+                riskLevel = 'medium';
+            }
+
+            const riskLabels = { low: 'Low Stroke Risk', medium: 'Medium Stroke Risk', high: 'High Stroke Risk' };
+            const riskCategory = riskLabels[riskLevel];
+
+            // Show risk badge immediately
+            const riskBadge = document.getElementById('riskBadge');
+            riskBadge.textContent = riskCategory;
+            riskBadge.className = `risk-badge ${riskLevel}`;
+
+            // Get recommendations from backend
+            try {
+                const response = await fetch('/api/get-doctor-recommendations', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        ...formData,
+                        risk_level: riskLevel
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    displayRecommendations(data.recommendations, riskLevel, riskCategory);
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }
+        });
+
+        function displayRecommendations(recommendations, riskLevel, riskCategory) {
+            const resultsSection = document.getElementById('resultsSection');
+            const riskBadge = document.getElementById('riskBadge');
+
+            // Save recommendations for PDF download
+            currentRecommendations = recommendations;
+
+            // Update risk badge (use passed values)
+            riskBadge.textContent = riskCategory;
+            riskBadge.className = `risk-badge ${riskLevel}`;
+
+            // Display medical advice
+            const medicalAdviceList = document.getElementById('medicalAdvice');
+            medicalAdviceList.innerHTML = recommendations.medical_advice.map(advice => 
+                `<li>${advice}</li>`
+            ).join('');
+            
+            if (recommendations.risk_level === 'high') {
+                medicalAdviceList.classList.add('critical');
+            } else {
+                medicalAdviceList.classList.remove('critical');
+            }
+
+            // Display Indian foods to eat
+            document.getElementById('indianFoodsToEat').innerHTML = recommendations.indian_foods_to_eat.map(food =>
+                `<li>${food}</li>`
+            ).join('');
+
+            // Display Indian foods to avoid
+            document.getElementById('indianFoodsToAvoid').innerHTML = recommendations.indian_foods_to_avoid.map(food =>
+                `<li>${food}</li>`
+            ).join('');
+
+            // Display lifestyle changes
+            document.getElementById('lifestyleChanges').innerHTML = recommendations.lifestyle_changes.map(change =>
+                `<li>${change}</li>`
+            ).join('');
+
+            // Display Indian food suggestions
+            if (recommendations.indian_food_suggestions && recommendations.indian_food_suggestions.length > 0) {
+                document.getElementById('indianFoodSuggestions').innerHTML = recommendations.indian_food_suggestions.map(food =>
+                    `<li>${food}</li>`
+                ).join('');
+            }
+
+            // Show results
+            resultsSection.classList.add('show');
+            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        async function downloadDoctorPDF() {
+            if (!currentFormData || !currentRecommendations) {
+                alert('Please generate recommendations first.');
+                return;
+            }
+            const btn = document.getElementById('downloadDoctorPdfBtn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating PDF...';
+            btn.disabled = true;
+            try {
+                const response = await fetch('/download-doctor-report', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        input_data: currentFormData,
+                        recommendations: currentRecommendations
+                    })
+                });
+                if (!response.ok) throw new Error('Server error: ' + response.status);
+                const blob = await response.blob();
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Doctor_Recommendations_Report.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            } catch (err) {
+                console.error('PDF download error:', err);
+                alert('Failed to download PDF. Please try again.');
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+    </script>
+
+    <!-- Theme Toggle -->
+    <script src="/static/js/theme-toggle.js"></script>
+</body>
+
+</html>

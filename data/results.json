@@ -1,0 +1,1179 @@
+{
+    "admin": [
+        {
+            "timestamp": "2026-02-10T11:20:08.169985",
+            "input_data": {
+                "age": "50",
+                "gender": "Female",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "0",
+                "heart_disease": "0",
+                "avg_glucose_level": "100",
+                "bmi": "25",
+                "work_type": "Private",
+                "smoking_status": "never smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 0.4,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 6.5,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 3.4,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd57 Fresh vegetables",
+                    "\ud83c\udf4e Fresh fruits",
+                    "\ud83d\udca7 Plenty of water (8 glasses/day)",
+                    "\ud83c\udf3e Whole grains"
+                ],
+                "foods_to_avoid": [],
+                "general_advice": [],
+                "urgent_message": null
+            }
+        },
+        {
+            "timestamp": "2026-02-10T11:57:24.403748",
+            "input_data": {
+                "age": "50",
+                "gender": "Female",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "0",
+                "heart_disease": "0",
+                "avg_glucose_level": "100",
+                "bmi": "25",
+                "work_type": "Private",
+                "smoking_status": "never smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 0.4,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 6.5,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 3.4,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd57 Fresh vegetables",
+                    "\ud83c\udf4e Fresh fruits",
+                    "\ud83d\udca7 Plenty of water (8 glasses/day)",
+                    "\ud83c\udf3e Whole grains"
+                ],
+                "foods_to_avoid": [],
+                "general_advice": [],
+                "urgent_message": null
+            }
+        }
+    ],
+    "raj@gmail.com": [
+        {
+            "timestamp": "2026-02-12T14:14:53.029581",
+            "input_data": {
+                "age": "25",
+                "gender": "Male",
+                "ever_married": "Yes",
+                "residence_type": "Rural",
+                "hypertension": "1",
+                "heart_disease": "1",
+                "avg_glucose_level": "115",
+                "bmi": "37.8",
+                "work_type": "Private",
+                "smoking_status": "smokes"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 0.2,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 3.6,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 1.9,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83c\udf75 Green tea",
+                    "\ud83e\udd5c Unsalted nuts",
+                    "\ud83e\uddc4 Garlic and onions",
+                    "\ud83c\udf57 Lean protein (chicken breast, turkey)",
+                    "\ud83c\udf3e Whole grains (quinoa, brown rice)",
+                    "\ud83c\udf4e Apples and citrus fruits",
+                    "\ud83c\udf77 Red wine (moderate, if approved by doctor)",
+                    "\ud83d\udc1f Omega-3 rich fish (2-3 times/week)",
+                    "\ud83e\udd57 Fresh salads with olive oil",
+                    "\ud83e\uded2 Extra virgin olive oil",
+                    "\ud83e\udd52 Low-calorie vegetables (cucumber, celery)",
+                    "\ud83e\uded2 Olive oil",
+                    "\ud83e\udd5a Protein-rich breakfast",
+                    "\ud83c\udf60 Sweet potatoes",
+                    "\ud83e\udd5b Low-fat dairy",
+                    "\ud83c\udf4c Potassium-rich foods (bananas, potatoes)"
+                ],
+                "foods_to_avoid": [
+                    "\ud83e\uddc8 Trans fats and saturated fats",
+                    "\ud83e\udd50 Pastries and baked goods",
+                    "\ud83e\uddc0 High-sodium cheeses",
+                    "\ud83e\udd53 Fatty meats",
+                    "\ud83c\udf55 High-calorie processed foods",
+                    "\ud83c\udf7f Buttery snacks",
+                    "\ud83e\udd6b Canned soups and processed foods",
+                    "\ud83c\udf73 Excessive egg yolks",
+                    "\ud83e\udd53 Processed meats (bacon, sausages)",
+                    "\ud83c\udf6d High-sugar snacks",
+                    "\ud83e\uddc2 High-sodium foods",
+                    "\ud83c\udf54 Fast food",
+                    "\ud83e\udd69 Red meat (limit consumption)"
+                ],
+                "general_advice": [
+                    "Follow a Mediterranean-style diet. Regular cardiac check-ups are essential.",
+                    "Follow a DASH diet. Limit sodium to less than 2,300mg/day.",
+                    "Weight management is crucial. Consider portion control and regular exercise.",
+                    "Your glucose is slightly elevated. Focus on fiber-rich foods."
+                ],
+                "urgent_message": null
+            }
+        },
+        {
+            "timestamp": "2026-02-12T14:15:20.285117",
+            "input_data": {
+                "age": "25",
+                "gender": "Male",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "1",
+                "heart_disease": "1",
+                "avg_glucose_level": "60",
+                "bmi": "18.8",
+                "work_type": "Self-employed",
+                "smoking_status": "formerly smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 0.3,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 33.5,
+                    "risk_level": "MEDIUM"
+                },
+                "ensemble": {
+                    "probability": 16.9,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd5c Unsalted nuts",
+                    "\ud83e\uddc4 Garlic and onions",
+                    "\ud83c\udf77 Red wine (moderate, if approved by doctor)",
+                    "\ud83d\udc1f Omega-3 rich fish (2-3 times/week)",
+                    "\ud83e\uded2 Extra virgin olive oil",
+                    "\ud83e\uded2 Olive oil",
+                    "\ud83e\udd5b Low-fat dairy",
+                    "\ud83c\udf4c Potassium-rich foods (bananas, potatoes)"
+                ],
+                "foods_to_avoid": [
+                    "\ud83e\uddc8 Trans fats and saturated fats",
+                    "\ud83e\uddc0 High-sodium cheeses",
+                    "\ud83e\uddc2 High-sodium foods",
+                    "\ud83e\udd6b Canned soups and processed foods",
+                    "\ud83c\udf73 Excessive egg yolks",
+                    "\ud83e\udd53 Processed meats (bacon, sausages)",
+                    "\ud83e\udd69 Red meat (limit consumption)"
+                ],
+                "general_advice": [
+                    "Follow a Mediterranean-style diet. Regular cardiac check-ups are essential.",
+                    "Follow a DASH diet. Limit sodium to less than 2,300mg/day."
+                ],
+                "urgent_message": null
+            }
+        },
+        {
+            "timestamp": "2026-02-14T19:16:31.518503",
+            "input_data": {
+                "age": "50",
+                "gender": "Female",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "0",
+                "heart_disease": "0",
+                "avg_glucose_level": "100",
+                "bmi": "25",
+                "work_type": "Private",
+                "smoking_status": "never smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 0.4,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 6.5,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 3.4,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd57 Fresh vegetables",
+                    "\ud83c\udf4e Fresh fruits",
+                    "\ud83d\udca7 Plenty of water (8 glasses/day)",
+                    "\ud83c\udf3e Whole grains"
+                ],
+                "foods_to_avoid": [],
+                "general_advice": [],
+                "urgent_message": null
+            }
+        },
+        {
+            "timestamp": "2026-02-14T22:57:48.240757",
+            "input_data": {
+                "age": "50",
+                "gender": "Female",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "0",
+                "heart_disease": "0",
+                "avg_glucose_level": "100",
+                "bmi": "25",
+                "work_type": "Private",
+                "smoking_status": "never smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 0.4,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 6.5,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 3.4,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd57 Fresh vegetables",
+                    "\ud83c\udf4e Fresh fruits",
+                    "\ud83d\udca7 Plenty of water (8 glasses/day)",
+                    "\ud83c\udf3e Whole grains"
+                ],
+                "foods_to_avoid": [],
+                "general_advice": [],
+                "urgent_message": null
+            }
+        }
+    ],
+    "rajasekhar6105_gmail_com": [
+        {
+            "timestamp": "2026-02-19T11:39:21.607215",
+            "input_data": {
+                "age": "50",
+                "gender": "Male",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "0",
+                "heart_disease": "0",
+                "avg_glucose_level": "166",
+                "bmi": "25",
+                "work_type": "children",
+                "smoking_status": "never smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 0.6,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 5.0,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 2.8,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd6c Leafy greens (spinach, kale, broccoli)",
+                    "\ud83c\udf73 Eggs",
+                    "\ud83e\uded0 Berries (blueberries, strawberries)",
+                    "\ud83e\uded8 Legumes (lentils, chickpeas, beans)",
+                    "\ud83e\udd51 Avocados",
+                    "\ud83e\udd5c Nuts (almonds, walnuts)",
+                    "\ud83d\udc1f Fatty fish (salmon, mackerel)"
+                ],
+                "foods_to_avoid": [
+                    "\ud83c\udf5e White bread and refined carbs",
+                    "\ud83e\udd64 Fruit juices with added sugar",
+                    "\ud83c\udf5f Fried foods",
+                    "\ud83c\udf70 Processed desserts and sweets",
+                    "\ud83c\udf6c Sugary drinks and sodas"
+                ],
+                "general_advice": [
+                    "Monitor blood sugar levels regularly. Consider a low-glycemic diet."
+                ],
+                "urgent_message": null
+            }
+        },
+        {
+            "timestamp": "2026-02-23T10:08:48.138235",
+            "input_data": {
+                "age": "50",
+                "gender": "Female",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "0",
+                "heart_disease": "0",
+                "avg_glucose_level": "100",
+                "bmi": "25",
+                "work_type": "Private",
+                "smoking_status": "never smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 0.4,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 6.5,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 3.4,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd57 Fresh vegetables",
+                    "\ud83c\udf4e Fresh fruits",
+                    "\ud83d\udca7 Plenty of water (8 glasses/day)",
+                    "\ud83c\udf3e Whole grains"
+                ],
+                "foods_to_avoid": [],
+                "general_advice": [],
+                "urgent_message": null
+            },
+            "doctor_recommendations": {
+                "risk_category": "Medium Risk",
+                "risk_level": "MEDIUM",
+                "medical_advice": [
+                    "\u26a0\ufe0f Your glucose and/or blood pressure levels indicate medium risk",
+                    "Schedule a consultation with your doctor within 2 weeks",
+                    "Regular monitoring of glucose and blood pressure is essential",
+                    "Consider lifestyle modifications to prevent progression",
+                    "Monthly medical check-ups recommended"
+                ],
+                "indian_foods_to_eat": [
+                    "\ud83e\udd6c Methi (fenugreek) sabzi - Helps control blood sugar",
+                    "\ud83e\uded8 Masoor dal, moong dal, chana dal",
+                    "\ud83e\udd52 Karela (bitter gourd) juice or sabzi",
+                    "\ud83c\udf3e Oats upma or dalia (broken wheat)",
+                    "\ud83e\udd57 Cabbage and carrot sabzi",
+                    "\ud83c\udf45 Tomato soup (low salt)",
+                    "\ud83e\udeda Ginger and garlic in cooking",
+                    "\ud83e\udd5c Small portions of almonds and walnuts",
+                    "\ud83c\udf75 Green tea or tulsi tea",
+                    "\ud83e\udd65 Buttermilk (chaas) without salt",
+                    "\ud83e\udd55 Beetroot and carrot salad",
+                    "\ud83e\uded1 Capsicum (bell pepper) sabzi"
+                ],
+                "indian_foods_to_avoid": [
+                    "\ud83c\udf5a White rice and refined flour (maida) products",
+                    "\ud83e\udd54 Potato-based dishes (aloo paratha, aloo sabzi)",
+                    "\ud83c\udf70 All sweets and desserts (mithai, halwa, kheer)",
+                    "\ud83c\udf5f Fried foods (samosa, kachori, poori, bhatura)",
+                    "\ud83e\uddc2 High-salt foods (pickles, papad, namkeen)",
+                    "\ud83e\udd53 Processed meats and sausages",
+                    "\ud83e\uddc8 Ghee and butter in excess",
+                    "\ud83e\udd64 Sugary beverages and packaged juices",
+                    "\ud83c\udf5e White bread and biscuits",
+                    "\ud83e\uddc0 Full-fat paneer and cheese"
+                ],
+                "lifestyle_changes": [
+                    "Walking for 45 minutes daily (morning or evening)",
+                    "Practice pranayama and meditation for stress reduction",
+                    "Monitor blood sugar levels twice a week",
+                    "Reduce salt intake to less than 5g per day",
+                    "Avoid skipping meals - eat small frequent meals",
+                    "Limit screen time and ensure adequate rest",
+                    "Consider joining a diabetes/hypertension management program"
+                ]
+            },
+            "indian_food_recommendations": [
+                "\u26a0\ufe0f Moderate glucose - Prefer: Sugar-free dal preparations, methi leaves, bitter gourd sabzi",
+                "\u274c Reduce: White rice, sweet dishes, refined flour items",
+                "\u2696\ufe0f Light meals: Khichdi, dal-rice, vegetable soups",
+                "\ud83e\udd57 Moong dal (yellow lentils) - high in protein, low in fat",
+                "\ud83c\udf5a Brown rice or hand-pounded rice instead of white rice",
+                "\ud83e\udd6c Palak (spinach) sabzi with minimal oil",
+                "\ud83e\udd52 Cucumber raita with low-fat yogurt",
+                "\ud83e\uded8 Chana dal or masoor dal preparations",
+                "\ud83c\udf3e Ragi (finger millet) porridge or roti",
+                "\ud83d\udca1 Cooking tips: Use minimal oil, prefer steaming/boiling, add turmeric & ginger",
+                "\ud83e\udd64 Beverages: Buttermilk (low salt), herbal tea, jeera water, avoid sugary drinks"
+            ]
+        },
+        {
+            "timestamp": "2026-02-23T10:08:51.609339",
+            "input_data": {
+                "age": "50",
+                "gender": "Female",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "0",
+                "heart_disease": "0",
+                "avg_glucose_level": "178",
+                "bmi": "25",
+                "work_type": "Private",
+                "smoking_status": "never smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 0.8,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 5.3,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 3.1,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd6c Leafy greens (spinach, kale, broccoli)",
+                    "\ud83e\uded0 Berries (blueberries, strawberries)",
+                    "\ud83e\udd51 Avocados",
+                    "\ud83d\udc1f Fatty fish (salmon, mackerel)",
+                    "\ud83e\uded8 Legumes (lentils, chickpeas, beans)",
+                    "\ud83c\udf73 Eggs",
+                    "\ud83e\udd5c Nuts (almonds, walnuts)"
+                ],
+                "foods_to_avoid": [
+                    "\ud83c\udf5e White bread and refined carbs",
+                    "\ud83c\udf70 Processed desserts and sweets",
+                    "\ud83c\udf6c Sugary drinks and sodas",
+                    "\ud83e\udd64 Fruit juices with added sugar",
+                    "\ud83c\udf5f Fried foods"
+                ],
+                "general_advice": [
+                    "Monitor blood sugar levels regularly. Consider a low-glycemic diet."
+                ],
+                "urgent_message": null
+            },
+            "doctor_recommendations": {
+                "risk_category": "High Risk",
+                "risk_level": "HIGH",
+                "medical_advice": [
+                    "\ud83d\udea8 URGENT: Your glucose and/or blood pressure levels are critically high",
+                    "IMMEDIATE doctor consultation required - within 24-48 hours",
+                    "You may need medication to manage glucose and blood pressure",
+                    "Daily monitoring of vital parameters is mandatory",
+                    "Follow prescribed medication schedule strictly",
+                    "Consider hospitalization if symptoms worsen",
+                    "Weekly doctor follow-ups essential"
+                ],
+                "indian_foods_to_eat": [
+                    "\ud83e\uded8 Only dal-based proteins (masoor, moong - minimal oil)",
+                    "\ud83e\udd6c Steamed or boiled vegetables (palak, lauki, turai)",
+                    "\ud83e\udd52 Karela juice daily (bitter gourd)",
+                    "\ud83e\udeda Ginger-garlic paste in minimal quantities",
+                    "\ud83c\udf75 Herbal teas (green tea, fenugreek tea)",
+                    "\ud83e\udd57 Raw salads (cucumber, tomato, radish)",
+                    "\ud83c\udf3e Small portions of oats or dalia",
+                    "\ud83e\udd65 Coconut water (natural, unsweetened)",
+                    "\ud83e\uded8 Sprouts (moong, chana) - steamed",
+                    "\ud83e\udd5b Skimmed milk only"
+                ],
+                "indian_foods_to_avoid": [
+                    "\ud83d\udeab COMPLETELY AVOID all sweets and desserts",
+                    "\ud83d\udeab NO fried foods whatsoever (pakora, samosa, poori, vada)",
+                    "\ud83d\udeab NO white rice, potatoes, or maida products",
+                    "\ud83d\udeab NO pickles, papad, or namkeen",
+                    "\ud83d\udeab NO full-fat dairy products",
+                    "\ud83d\udeab NO ghee, butter, or dalda",
+                    "\ud83d\udeab NO sugary drinks, sodas, or packaged juices",
+                    "\ud83d\udeab NO processed or canned foods",
+                    "\ud83d\udeab NO red meat or organ meats",
+                    "\ud83d\udeab NO coconut milk or heavy gravies",
+                    "\ud83d\udeab NO bakery items (bread, biscuits, cakes)",
+                    "\ud83d\udeab Strictly limit salt to 3g per day"
+                ],
+                "lifestyle_changes": [
+                    "\u26a0\ufe0f CRITICAL: Strict adherence to medication schedule",
+                    "Monitor glucose levels twice daily (fasting and post-meal)",
+                    "Check blood pressure twice daily",
+                    "Walking after every meal (even 10-15 minutes helps)",
+                    "Complete bed rest if advised by doctor",
+                    "Avoid all sources of stress - practice deep breathing",
+                    "Sleep 8 hours minimum, maintain regular sleep schedule",
+                    "Keep emergency contact numbers handy",
+                    "Inform family members about your condition",
+                    "Consider staying with family/caregivers initially"
+                ]
+            },
+            "indian_food_recommendations": [
+                "\ud83d\udea8 High glucose - Focus on: Karela juice, methi water, chana dal, avoid all sweets",
+                "\u274c Strictly avoid: Rice dishes, roti made from maida, jaggery-based foods",
+                "\u2696\ufe0f Light meals: Khichdi, dal-rice, vegetable soups",
+                "\ud83e\udd57 Moong dal (yellow lentils) - high in protein, low in fat",
+                "\ud83c\udf5a Brown rice or hand-pounded rice instead of white rice",
+                "\ud83e\udd6c Palak (spinach) sabzi with minimal oil",
+                "\ud83e\udd52 Cucumber raita with low-fat yogurt",
+                "\ud83e\uded8 Chana dal or masoor dal preparations",
+                "\ud83c\udf3e Ragi (finger millet) porridge or roti",
+                "\ud83d\udca1 Cooking tips: Use minimal oil, prefer steaming/boiling, add turmeric & ginger",
+                "\ud83e\udd64 Beverages: Buttermilk (low salt), herbal tea, jeera water, avoid sugary drinks"
+            ]
+        },
+        {
+            "timestamp": "2026-02-23T10:08:54.880373",
+            "input_data": {
+                "age": "50",
+                "gender": "Female",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "0",
+                "heart_disease": "0",
+                "avg_glucose_level": "178",
+                "bmi": "30.7",
+                "work_type": "Private",
+                "smoking_status": "never smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 27.8,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 5.7,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 16.8,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd6c Leafy greens (spinach, kale, broccoli)",
+                    "\ud83c\udf75 Green tea",
+                    "\ud83e\uded0 Berries (blueberries, strawberries)",
+                    "\ud83e\udd51 Avocados",
+                    "\ud83d\udc1f Fatty fish (salmon, mackerel)",
+                    "\ud83e\uded8 Legumes (lentils, chickpeas, beans)",
+                    "\ud83e\udd52 Low-calorie vegetables (cucumber, celery)",
+                    "\ud83e\udd5a Protein-rich breakfast",
+                    "\ud83c\udf57 Lean protein (chicken breast, turkey)",
+                    "\ud83c\udf73 Eggs",
+                    "\ud83e\udd5c Nuts (almonds, walnuts)"
+                ],
+                "foods_to_avoid": [
+                    "\ud83c\udf5e White bread and refined carbs",
+                    "\ud83c\udf55 High-calorie processed foods",
+                    "\ud83c\udf70 Processed desserts and sweets",
+                    "\ud83c\udf6c Sugary drinks and sodas",
+                    "\ud83e\udd53 Fatty meats",
+                    "\ud83e\udd64 Fruit juices with added sugar",
+                    "\ud83c\udf7f Buttery snacks",
+                    "\ud83c\udf5f Fried foods",
+                    "\ud83c\udf54 Fast food"
+                ],
+                "general_advice": [
+                    "Weight management is crucial. Consider portion control and regular exercise.",
+                    "Monitor blood sugar levels regularly. Consider a low-glycemic diet."
+                ],
+                "urgent_message": null
+            },
+            "doctor_recommendations": {
+                "risk_category": "High Risk",
+                "risk_level": "HIGH",
+                "medical_advice": [
+                    "\ud83d\udea8 URGENT: Your glucose and/or blood pressure levels are critically high",
+                    "IMMEDIATE doctor consultation required - within 24-48 hours",
+                    "You may need medication to manage glucose and blood pressure",
+                    "Daily monitoring of vital parameters is mandatory",
+                    "Follow prescribed medication schedule strictly",
+                    "Consider hospitalization if symptoms worsen",
+                    "Weekly doctor follow-ups essential"
+                ],
+                "indian_foods_to_eat": [
+                    "\ud83e\uded8 Only dal-based proteins (masoor, moong - minimal oil)",
+                    "\ud83e\udd6c Steamed or boiled vegetables (palak, lauki, turai)",
+                    "\ud83e\udd52 Karela juice daily (bitter gourd)",
+                    "\ud83e\udeda Ginger-garlic paste in minimal quantities",
+                    "\ud83c\udf75 Herbal teas (green tea, fenugreek tea)",
+                    "\ud83e\udd57 Raw salads (cucumber, tomato, radish)",
+                    "\ud83c\udf3e Small portions of oats or dalia",
+                    "\ud83e\udd65 Coconut water (natural, unsweetened)",
+                    "\ud83e\uded8 Sprouts (moong, chana) - steamed",
+                    "\ud83e\udd5b Skimmed milk only"
+                ],
+                "indian_foods_to_avoid": [
+                    "\ud83d\udeab COMPLETELY AVOID all sweets and desserts",
+                    "\ud83d\udeab NO fried foods whatsoever (pakora, samosa, poori, vada)",
+                    "\ud83d\udeab NO white rice, potatoes, or maida products",
+                    "\ud83d\udeab NO pickles, papad, or namkeen",
+                    "\ud83d\udeab NO full-fat dairy products",
+                    "\ud83d\udeab NO ghee, butter, or dalda",
+                    "\ud83d\udeab NO sugary drinks, sodas, or packaged juices",
+                    "\ud83d\udeab NO processed or canned foods",
+                    "\ud83d\udeab NO red meat or organ meats",
+                    "\ud83d\udeab NO coconut milk or heavy gravies",
+                    "\ud83d\udeab NO bakery items (bread, biscuits, cakes)",
+                    "\ud83d\udeab Strictly limit salt to 3g per day"
+                ],
+                "lifestyle_changes": [
+                    "\u26a0\ufe0f CRITICAL: Strict adherence to medication schedule",
+                    "Monitor glucose levels twice daily (fasting and post-meal)",
+                    "Check blood pressure twice daily",
+                    "Walking after every meal (even 10-15 minutes helps)",
+                    "Complete bed rest if advised by doctor",
+                    "Avoid all sources of stress - practice deep breathing",
+                    "Sleep 8 hours minimum, maintain regular sleep schedule",
+                    "Keep emergency contact numbers handy",
+                    "Inform family members about your condition",
+                    "Consider staying with family/caregivers initially"
+                ]
+            },
+            "indian_food_recommendations": [
+                "\ud83d\udea8 High glucose - Focus on: Karela juice, methi water, chana dal, avoid all sweets",
+                "\u274c Strictly avoid: Rice dishes, roti made from maida, jaggery-based foods",
+                "\u2696\ufe0f Weight management: Choose steamed idli, vegetable upma, avoid fried foods",
+                "\u274c Skip: All fried items (samosa, pakora, bhajiya), heavy curries with cream",
+                "\ud83e\udd57 Moong dal (yellow lentils) - high in protein, low in fat",
+                "\ud83c\udf5a Brown rice or hand-pounded rice instead of white rice",
+                "\ud83e\udd6c Palak (spinach) sabzi with minimal oil",
+                "\ud83e\udd52 Cucumber raita with low-fat yogurt",
+                "\ud83e\uded8 Chana dal or masoor dal preparations",
+                "\ud83c\udf3e Ragi (finger millet) porridge or roti",
+                "\ud83d\udca1 Cooking tips: Use minimal oil, prefer steaming/boiling, add turmeric & ginger",
+                "\ud83e\udd64 Beverages: Buttermilk (low salt), herbal tea, jeera water, avoid sugary drinks"
+            ]
+        },
+        {
+            "timestamp": "2026-02-23T10:08:59.701170",
+            "input_data": {
+                "age": "50",
+                "gender": "Female",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "0",
+                "heart_disease": "0",
+                "avg_glucose_level": "178",
+                "bmi": "36.1",
+                "work_type": "Private",
+                "smoking_status": "never smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 11.0,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 4.8,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 7.9,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd6c Leafy greens (spinach, kale, broccoli)",
+                    "\ud83c\udf75 Green tea",
+                    "\ud83e\uded0 Berries (blueberries, strawberries)",
+                    "\ud83e\udd51 Avocados",
+                    "\ud83d\udc1f Fatty fish (salmon, mackerel)",
+                    "\ud83e\uded8 Legumes (lentils, chickpeas, beans)",
+                    "\ud83e\udd52 Low-calorie vegetables (cucumber, celery)",
+                    "\ud83e\udd5a Protein-rich breakfast",
+                    "\ud83c\udf57 Lean protein (chicken breast, turkey)",
+                    "\ud83c\udf73 Eggs",
+                    "\ud83e\udd5c Nuts (almonds, walnuts)"
+                ],
+                "foods_to_avoid": [
+                    "\ud83c\udf5e White bread and refined carbs",
+                    "\ud83c\udf55 High-calorie processed foods",
+                    "\ud83c\udf70 Processed desserts and sweets",
+                    "\ud83c\udf6c Sugary drinks and sodas",
+                    "\ud83e\udd53 Fatty meats",
+                    "\ud83e\udd64 Fruit juices with added sugar",
+                    "\ud83c\udf7f Buttery snacks",
+                    "\ud83c\udf5f Fried foods",
+                    "\ud83c\udf54 Fast food"
+                ],
+                "general_advice": [
+                    "Weight management is crucial. Consider portion control and regular exercise.",
+                    "Monitor blood sugar levels regularly. Consider a low-glycemic diet."
+                ],
+                "urgent_message": null
+            },
+            "doctor_recommendations": {
+                "risk_category": "High Risk",
+                "risk_level": "HIGH",
+                "medical_advice": [
+                    "\ud83d\udea8 URGENT: Your glucose and/or blood pressure levels are critically high",
+                    "IMMEDIATE doctor consultation required - within 24-48 hours",
+                    "You may need medication to manage glucose and blood pressure",
+                    "Daily monitoring of vital parameters is mandatory",
+                    "Follow prescribed medication schedule strictly",
+                    "Consider hospitalization if symptoms worsen",
+                    "Weekly doctor follow-ups essential"
+                ],
+                "indian_foods_to_eat": [
+                    "\ud83e\uded8 Only dal-based proteins (masoor, moong - minimal oil)",
+                    "\ud83e\udd6c Steamed or boiled vegetables (palak, lauki, turai)",
+                    "\ud83e\udd52 Karela juice daily (bitter gourd)",
+                    "\ud83e\udeda Ginger-garlic paste in minimal quantities",
+                    "\ud83c\udf75 Herbal teas (green tea, fenugreek tea)",
+                    "\ud83e\udd57 Raw salads (cucumber, tomato, radish)",
+                    "\ud83c\udf3e Small portions of oats or dalia",
+                    "\ud83e\udd65 Coconut water (natural, unsweetened)",
+                    "\ud83e\uded8 Sprouts (moong, chana) - steamed",
+                    "\ud83e\udd5b Skimmed milk only"
+                ],
+                "indian_foods_to_avoid": [
+                    "\ud83d\udeab COMPLETELY AVOID all sweets and desserts",
+                    "\ud83d\udeab NO fried foods whatsoever (pakora, samosa, poori, vada)",
+                    "\ud83d\udeab NO white rice, potatoes, or maida products",
+                    "\ud83d\udeab NO pickles, papad, or namkeen",
+                    "\ud83d\udeab NO full-fat dairy products",
+                    "\ud83d\udeab NO ghee, butter, or dalda",
+                    "\ud83d\udeab NO sugary drinks, sodas, or packaged juices",
+                    "\ud83d\udeab NO processed or canned foods",
+                    "\ud83d\udeab NO red meat or organ meats",
+                    "\ud83d\udeab NO coconut milk or heavy gravies",
+                    "\ud83d\udeab NO bakery items (bread, biscuits, cakes)",
+                    "\ud83d\udeab Strictly limit salt to 3g per day"
+                ],
+                "lifestyle_changes": [
+                    "\u26a0\ufe0f CRITICAL: Strict adherence to medication schedule",
+                    "Monitor glucose levels twice daily (fasting and post-meal)",
+                    "Check blood pressure twice daily",
+                    "Walking after every meal (even 10-15 minutes helps)",
+                    "Complete bed rest if advised by doctor",
+                    "Avoid all sources of stress - practice deep breathing",
+                    "Sleep 8 hours minimum, maintain regular sleep schedule",
+                    "Keep emergency contact numbers handy",
+                    "Inform family members about your condition",
+                    "Consider staying with family/caregivers initially"
+                ]
+            },
+            "indian_food_recommendations": [
+                "\ud83d\udea8 High glucose - Focus on: Karela juice, methi water, chana dal, avoid all sweets",
+                "\u274c Strictly avoid: Rice dishes, roti made from maida, jaggery-based foods",
+                "\u2696\ufe0f Weight management: Choose steamed idli, vegetable upma, avoid fried foods",
+                "\u274c Skip: All fried items (samosa, pakora, bhajiya), heavy curries with cream",
+                "\ud83e\udd57 Moong dal (yellow lentils) - high in protein, low in fat",
+                "\ud83c\udf5a Brown rice or hand-pounded rice instead of white rice",
+                "\ud83e\udd6c Palak (spinach) sabzi with minimal oil",
+                "\ud83e\udd52 Cucumber raita with low-fat yogurt",
+                "\ud83e\uded8 Chana dal or masoor dal preparations",
+                "\ud83c\udf3e Ragi (finger millet) porridge or roti",
+                "\ud83d\udca1 Cooking tips: Use minimal oil, prefer steaming/boiling, add turmeric & ginger",
+                "\ud83e\udd64 Beverages: Buttermilk (low salt), herbal tea, jeera water, avoid sugary drinks"
+            ]
+        },
+        {
+            "timestamp": "2026-02-23T10:09:02.863012",
+            "input_data": {
+                "age": "50",
+                "gender": "Female",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "0",
+                "heart_disease": "0",
+                "avg_glucose_level": "139",
+                "bmi": "36.1",
+                "work_type": "Private",
+                "smoking_status": "never smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 4.5,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 5.2,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 4.9,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd6c Leafy greens (spinach, kale, broccoli)",
+                    "\ud83c\udf75 Green tea",
+                    "\ud83e\uded0 Berries (blueberries, strawberries)",
+                    "\ud83e\udd51 Avocados",
+                    "\ud83d\udc1f Fatty fish (salmon, mackerel)",
+                    "\ud83e\uded8 Legumes (lentils, chickpeas, beans)",
+                    "\ud83e\udd52 Low-calorie vegetables (cucumber, celery)",
+                    "\ud83e\udd5a Protein-rich breakfast",
+                    "\ud83c\udf57 Lean protein (chicken breast, turkey)",
+                    "\ud83c\udf73 Eggs",
+                    "\ud83e\udd5c Nuts (almonds, walnuts)"
+                ],
+                "foods_to_avoid": [
+                    "\ud83c\udf5e White bread and refined carbs",
+                    "\ud83c\udf55 High-calorie processed foods",
+                    "\ud83c\udf70 Processed desserts and sweets",
+                    "\ud83c\udf6c Sugary drinks and sodas",
+                    "\ud83e\udd53 Fatty meats",
+                    "\ud83e\udd64 Fruit juices with added sugar",
+                    "\ud83c\udf7f Buttery snacks",
+                    "\ud83c\udf5f Fried foods",
+                    "\ud83c\udf54 Fast food"
+                ],
+                "general_advice": [
+                    "Weight management is crucial. Consider portion control and regular exercise.",
+                    "Monitor blood sugar levels regularly. Consider a low-glycemic diet."
+                ],
+                "urgent_message": null
+            },
+            "doctor_recommendations": {
+                "risk_category": "Medium Risk",
+                "risk_level": "MEDIUM",
+                "medical_advice": [
+                    "\u26a0\ufe0f Your glucose and/or blood pressure levels indicate medium risk",
+                    "Schedule a consultation with your doctor within 2 weeks",
+                    "Regular monitoring of glucose and blood pressure is essential",
+                    "Consider lifestyle modifications to prevent progression",
+                    "Monthly medical check-ups recommended"
+                ],
+                "indian_foods_to_eat": [
+                    "\ud83e\udd6c Methi (fenugreek) sabzi - Helps control blood sugar",
+                    "\ud83e\uded8 Masoor dal, moong dal, chana dal",
+                    "\ud83e\udd52 Karela (bitter gourd) juice or sabzi",
+                    "\ud83c\udf3e Oats upma or dalia (broken wheat)",
+                    "\ud83e\udd57 Cabbage and carrot sabzi",
+                    "\ud83c\udf45 Tomato soup (low salt)",
+                    "\ud83e\udeda Ginger and garlic in cooking",
+                    "\ud83e\udd5c Small portions of almonds and walnuts",
+                    "\ud83c\udf75 Green tea or tulsi tea",
+                    "\ud83e\udd65 Buttermilk (chaas) without salt",
+                    "\ud83e\udd55 Beetroot and carrot salad",
+                    "\ud83e\uded1 Capsicum (bell pepper) sabzi"
+                ],
+                "indian_foods_to_avoid": [
+                    "\ud83c\udf5a White rice and refined flour (maida) products",
+                    "\ud83e\udd54 Potato-based dishes (aloo paratha, aloo sabzi)",
+                    "\ud83c\udf70 All sweets and desserts (mithai, halwa, kheer)",
+                    "\ud83c\udf5f Fried foods (samosa, kachori, poori, bhatura)",
+                    "\ud83e\uddc2 High-salt foods (pickles, papad, namkeen)",
+                    "\ud83e\udd53 Processed meats and sausages",
+                    "\ud83e\uddc8 Ghee and butter in excess",
+                    "\ud83e\udd64 Sugary beverages and packaged juices",
+                    "\ud83c\udf5e White bread and biscuits",
+                    "\ud83e\uddc0 Full-fat paneer and cheese"
+                ],
+                "lifestyle_changes": [
+                    "Walking for 45 minutes daily (morning or evening)",
+                    "Practice pranayama and meditation for stress reduction",
+                    "Monitor blood sugar levels twice a week",
+                    "Reduce salt intake to less than 5g per day",
+                    "Avoid skipping meals - eat small frequent meals",
+                    "Limit screen time and ensure adequate rest",
+                    "Consider joining a diabetes/hypertension management program"
+                ]
+            },
+            "indian_food_recommendations": [
+                "\u26a0\ufe0f Moderate glucose - Prefer: Sugar-free dal preparations, methi leaves, bitter gourd sabzi",
+                "\u274c Reduce: White rice, sweet dishes, refined flour items",
+                "\u2696\ufe0f Weight management: Choose steamed idli, vegetable upma, avoid fried foods",
+                "\u274c Skip: All fried items (samosa, pakora, bhajiya), heavy curries with cream",
+                "\ud83e\udd57 Moong dal (yellow lentils) - high in protein, low in fat",
+                "\ud83c\udf5a Brown rice or hand-pounded rice instead of white rice",
+                "\ud83e\udd6c Palak (spinach) sabzi with minimal oil",
+                "\ud83e\udd52 Cucumber raita with low-fat yogurt",
+                "\ud83e\uded8 Chana dal or masoor dal preparations",
+                "\ud83c\udf3e Ragi (finger millet) porridge or roti",
+                "\ud83d\udca1 Cooking tips: Use minimal oil, prefer steaming/boiling, add turmeric & ginger",
+                "\ud83e\udd64 Beverages: Buttermilk (low salt), herbal tea, jeera water, avoid sugary drinks"
+            ]
+        },
+        {
+            "timestamp": "2026-02-23T10:09:06.235712",
+            "input_data": {
+                "age": "50",
+                "gender": "Female",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "0",
+                "heart_disease": "0",
+                "avg_glucose_level": "192",
+                "bmi": "36.1",
+                "work_type": "Private",
+                "smoking_status": "never smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 10.9,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 5.0,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 8.0,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd6c Leafy greens (spinach, kale, broccoli)",
+                    "\ud83c\udf75 Green tea",
+                    "\ud83e\uded0 Berries (blueberries, strawberries)",
+                    "\ud83e\udd51 Avocados",
+                    "\ud83d\udc1f Fatty fish (salmon, mackerel)",
+                    "\ud83e\uded8 Legumes (lentils, chickpeas, beans)",
+                    "\ud83e\udd52 Low-calorie vegetables (cucumber, celery)",
+                    "\ud83e\udd5a Protein-rich breakfast",
+                    "\ud83c\udf57 Lean protein (chicken breast, turkey)",
+                    "\ud83c\udf73 Eggs",
+                    "\ud83e\udd5c Nuts (almonds, walnuts)"
+                ],
+                "foods_to_avoid": [
+                    "\ud83c\udf5e White bread and refined carbs",
+                    "\ud83c\udf55 High-calorie processed foods",
+                    "\ud83c\udf70 Processed desserts and sweets",
+                    "\ud83c\udf6c Sugary drinks and sodas",
+                    "\ud83e\udd53 Fatty meats",
+                    "\ud83e\udd64 Fruit juices with added sugar",
+                    "\ud83c\udf7f Buttery snacks",
+                    "\ud83c\udf5f Fried foods",
+                    "\ud83c\udf54 Fast food"
+                ],
+                "general_advice": [
+                    "Weight management is crucial. Consider portion control and regular exercise.",
+                    "Monitor blood sugar levels regularly. Consider a low-glycemic diet."
+                ],
+                "urgent_message": null
+            },
+            "doctor_recommendations": {
+                "risk_category": "High Risk",
+                "risk_level": "HIGH",
+                "medical_advice": [
+                    "\ud83d\udea8 URGENT: Your glucose and/or blood pressure levels are critically high",
+                    "IMMEDIATE doctor consultation required - within 24-48 hours",
+                    "You may need medication to manage glucose and blood pressure",
+                    "Daily monitoring of vital parameters is mandatory",
+                    "Follow prescribed medication schedule strictly",
+                    "Consider hospitalization if symptoms worsen",
+                    "Weekly doctor follow-ups essential"
+                ],
+                "indian_foods_to_eat": [
+                    "\ud83e\uded8 Only dal-based proteins (masoor, moong - minimal oil)",
+                    "\ud83e\udd6c Steamed or boiled vegetables (palak, lauki, turai)",
+                    "\ud83e\udd52 Karela juice daily (bitter gourd)",
+                    "\ud83e\udeda Ginger-garlic paste in minimal quantities",
+                    "\ud83c\udf75 Herbal teas (green tea, fenugreek tea)",
+                    "\ud83e\udd57 Raw salads (cucumber, tomato, radish)",
+                    "\ud83c\udf3e Small portions of oats or dalia",
+                    "\ud83e\udd65 Coconut water (natural, unsweetened)",
+                    "\ud83e\uded8 Sprouts (moong, chana) - steamed",
+                    "\ud83e\udd5b Skimmed milk only"
+                ],
+                "indian_foods_to_avoid": [
+                    "\ud83d\udeab COMPLETELY AVOID all sweets and desserts",
+                    "\ud83d\udeab NO fried foods whatsoever (pakora, samosa, poori, vada)",
+                    "\ud83d\udeab NO white rice, potatoes, or maida products",
+                    "\ud83d\udeab NO pickles, papad, or namkeen",
+                    "\ud83d\udeab NO full-fat dairy products",
+                    "\ud83d\udeab NO ghee, butter, or dalda",
+                    "\ud83d\udeab NO sugary drinks, sodas, or packaged juices",
+                    "\ud83d\udeab NO processed or canned foods",
+                    "\ud83d\udeab NO red meat or organ meats",
+                    "\ud83d\udeab NO coconut milk or heavy gravies",
+                    "\ud83d\udeab NO bakery items (bread, biscuits, cakes)",
+                    "\ud83d\udeab Strictly limit salt to 3g per day"
+                ],
+                "lifestyle_changes": [
+                    "\u26a0\ufe0f CRITICAL: Strict adherence to medication schedule",
+                    "Monitor glucose levels twice daily (fasting and post-meal)",
+                    "Check blood pressure twice daily",
+                    "Walking after every meal (even 10-15 minutes helps)",
+                    "Complete bed rest if advised by doctor",
+                    "Avoid all sources of stress - practice deep breathing",
+                    "Sleep 8 hours minimum, maintain regular sleep schedule",
+                    "Keep emergency contact numbers handy",
+                    "Inform family members about your condition",
+                    "Consider staying with family/caregivers initially"
+                ]
+            },
+            "indian_food_recommendations": [
+                "\ud83d\udea8 High glucose - Focus on: Karela juice, methi water, chana dal, avoid all sweets",
+                "\u274c Strictly avoid: Rice dishes, roti made from maida, jaggery-based foods",
+                "\u2696\ufe0f Weight management: Choose steamed idli, vegetable upma, avoid fried foods",
+                "\u274c Skip: All fried items (samosa, pakora, bhajiya), heavy curries with cream",
+                "\ud83e\udd57 Moong dal (yellow lentils) - high in protein, low in fat",
+                "\ud83c\udf5a Brown rice or hand-pounded rice instead of white rice",
+                "\ud83e\udd6c Palak (spinach) sabzi with minimal oil",
+                "\ud83e\udd52 Cucumber raita with low-fat yogurt",
+                "\ud83e\uded8 Chana dal or masoor dal preparations",
+                "\ud83c\udf3e Ragi (finger millet) porridge or roti",
+                "\ud83d\udca1 Cooking tips: Use minimal oil, prefer steaming/boiling, add turmeric & ginger",
+                "\ud83e\udd64 Beverages: Buttermilk (low salt), herbal tea, jeera water, avoid sugary drinks"
+            ]
+        },
+        {
+            "timestamp": "2026-02-23T10:09:10.974391",
+            "input_data": {
+                "age": "50",
+                "gender": "Female",
+                "ever_married": "Yes",
+                "residence_type": "Urban",
+                "hypertension": "0",
+                "heart_disease": "0",
+                "avg_glucose_level": "192",
+                "bmi": "42.1",
+                "work_type": "Private",
+                "smoking_status": "never smoked"
+            },
+            "results": {
+                "model_A": {
+                    "probability": 5.6,
+                    "risk_level": "LOW"
+                },
+                "model_B": {
+                    "probability": 10.5,
+                    "risk_level": "LOW"
+                },
+                "ensemble": {
+                    "probability": 8.1,
+                    "risk_level": "LOW"
+                }
+            },
+            "food_recommendations": {
+                "foods_to_eat": [
+                    "\ud83e\udd6c Leafy greens (spinach, kale, broccoli)",
+                    "\ud83c\udf75 Green tea",
+                    "\ud83e\uded0 Berries (blueberries, strawberries)",
+                    "\ud83e\udd51 Avocados",
+                    "\ud83d\udc1f Fatty fish (salmon, mackerel)",
+                    "\ud83e\uded8 Legumes (lentils, chickpeas, beans)",
+                    "\ud83e\udd52 Low-calorie vegetables (cucumber, celery)",
+                    "\ud83e\udd5a Protein-rich breakfast",
+                    "\ud83c\udf57 Lean protein (chicken breast, turkey)",
+                    "\ud83c\udf73 Eggs",
+                    "\ud83e\udd5c Nuts (almonds, walnuts)"
+                ],
+                "foods_to_avoid": [
+                    "\ud83c\udf5e White bread and refined carbs",
+                    "\ud83c\udf55 High-calorie processed foods",
+                    "\ud83c\udf70 Processed desserts and sweets",
+                    "\ud83c\udf6c Sugary drinks and sodas",
+                    "\ud83e\udd53 Fatty meats",
+                    "\ud83e\udd64 Fruit juices with added sugar",
+                    "\ud83c\udf7f Buttery snacks",
+                    "\ud83c\udf5f Fried foods",
+                    "\ud83c\udf54 Fast food"
+                ],
+                "general_advice": [
+                    "Weight management is crucial. Consider portion control and regular exercise.",
+                    "Monitor blood sugar levels regularly. Consider a low-glycemic diet."
+                ],
+                "urgent_message": null
+            },
+            "doctor_recommendations": {
+                "risk_category": "High Risk",
+                "risk_level": "HIGH",
+                "medical_advice": [
+                    "\ud83d\udea8 URGENT: Your glucose and/or blood pressure levels are critically high",
+                    "IMMEDIATE doctor consultation required - within 24-48 hours",
+                    "You may need medication to manage glucose and blood pressure",
+                    "Daily monitoring of vital parameters is mandatory",
+                    "Follow prescribed medication schedule strictly",
+                    "Consider hospitalization if symptoms worsen",
+                    "Weekly doctor follow-ups essential"
+                ],
+                "indian_foods_to_eat": [
+                    "\ud83e\uded8 Only dal-based proteins (masoor, moong - minimal oil)",
+                    "\ud83e\udd6c Steamed or boiled vegetables (palak, lauki, turai)",
+                    "\ud83e\udd52 Karela juice daily (bitter gourd)",
+                    "\ud83e\udeda Ginger-garlic paste in minimal quantities",
+                    "\ud83c\udf75 Herbal teas (green tea, fenugreek tea)",
+                    "\ud83e\udd57 Raw salads (cucumber, tomato, radish)",
+                    "\ud83c\udf3e Small portions of oats or dalia",
+                    "\ud83e\udd65 Coconut water (natural, unsweetened)",
+                    "\ud83e\uded8 Sprouts (moong, chana) - steamed",
+                    "\ud83e\udd5b Skimmed milk only"
+                ],
+                "indian_foods_to_avoid": [
+                    "\ud83d\udeab COMPLETELY AVOID all sweets and desserts",
+                    "\ud83d\udeab NO fried foods whatsoever (pakora, samosa, poori, vada)",
+                    "\ud83d\udeab NO white rice, potatoes, or maida products",
+                    "\ud83d\udeab NO pickles, papad, or namkeen",
+                    "\ud83d\udeab NO full-fat dairy products",
+                    "\ud83d\udeab NO ghee, butter, or dalda",
+                    "\ud83d\udeab NO sugary drinks, sodas, or packaged juices",
+                    "\ud83d\udeab NO processed or canned foods",
+                    "\ud83d\udeab NO red meat or organ meats",
+                    "\ud83d\udeab NO coconut milk or heavy gravies",
+                    "\ud83d\udeab NO bakery items (bread, biscuits, cakes)",
+                    "\ud83d\udeab Strictly limit salt to 3g per day"
+                ],
+                "lifestyle_changes": [
+                    "\u26a0\ufe0f CRITICAL: Strict adherence to medication schedule",
+                    "Monitor glucose levels twice daily (fasting and post-meal)",
+                    "Check blood pressure twice daily",
+                    "Walking after every meal (even 10-15 minutes helps)",
+                    "Complete bed rest if advised by doctor",
+                    "Avoid all sources of stress - practice deep breathing",
+                    "Sleep 8 hours minimum, maintain regular sleep schedule",
+                    "Keep emergency contact numbers handy",
+                    "Inform family members about your condition",
+                    "Consider staying with family/caregivers initially"
+                ]
+            },
+            "indian_food_recommendations": [
+                "\ud83d\udea8 High glucose - Focus on: Karela juice, methi water, chana dal, avoid all sweets",
+                "\u274c Strictly avoid: Rice dishes, roti made from maida, jaggery-based foods",
+                "\u2696\ufe0f Weight management: Choose steamed idli, vegetable upma, avoid fried foods",
+                "\u274c Skip: All fried items (samosa, pakora, bhajiya), heavy curries with cream",
+                "\ud83e\udd57 Moong dal (yellow lentils) - high in protein, low in fat",
+                "\ud83c\udf5a Brown rice or hand-pounded rice instead of white rice",
+                "\ud83e\udd6c Palak (spinach) sabzi with minimal oil",
+                "\ud83e\udd52 Cucumber raita with low-fat yogurt",
+                "\ud83e\uded8 Chana dal or masoor dal preparations",
+                "\ud83c\udf3e Ragi (finger millet) porridge or roti",
+                "\ud83d\udca1 Cooking tips: Use minimal oil, prefer steaming/boiling, add turmeric & ginger",
+                "\ud83e\udd64 Beverages: Buttermilk (low salt), herbal tea, jeera water, avoid sugary drinks"
+            ]
+        }
+    ]
+}
